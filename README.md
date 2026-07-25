@@ -14,8 +14,8 @@ Mantener un registro ordenado de los artículos, investigaciones y participacion
 ForoAcademico-Seminario/
 │
 ├── Foro Academico semana 1/
-│   ├── Pasos para una encuesta efectiva.tex
-│   └── Pasos para una encuesta efectiva.pdf
+│   ├── LA ENCUESTA, PREGUNTAR CON PROPOSITO.tex
+│   └── LA ENCUESTA, PREGUNTAR CON PROPOSITO.pdf
 │
 ├── Foro Academico semana 2/
 │   ├── Documento.tex
