@@ -1,0 +1,215 @@
+% !TeX program = xelatex
+\documentclass[12pt]{article}
+\usepackage[spanish, es-nodecimaldot]{babel}
+
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+
+\usepackage[letterpaper,top=2.4cm,bottom=2.4cm,left=2.4cm,right=2.4cm]{geometry}
+
+\usepackage{setspace}
+% Renglon cerrado
+\singlespacing
+\usepackage{xurl}
+\usepackage[hidelinks]{hyperref}
+
+\usepackage{enumitem}
+
+\usepackage{titlesec}
+
+\setlength{\parindent}{0pt}
+
+\setlength{\parskip}{6pt}
+
+\titleformat{\section}
+	{\normalfont\bfseries\fontsize{12}{14}\selectfont}
+	{}{0pt}{}
+\titlespacing*{\section}{0pt}{6pt}{0pt}
+
+\author{Jenny Sofía Morales}
+
+\begin{document}
+	
+	\begin{center}
+		
+		{\bfseries\fontsize{12}{14}\selectfont
+			PROGRAMACIÓN REACTIVA Y SISTEMAS REACTIVOS
+		}
+		
+		\vspace{0.4cm}
+		
+		{\itshape J. S. Morales López}
+		
+		\vspace{0.2cm}
+		
+		{\itshape 7690-08-6790 Universidad Mariano Gálvez}
+		
+		{\itshape Seminario de tecnologías de información}
+		
+		{\itshape
+			\href{mailto:jmorales115@miumg.edu.gt}
+			{jmorales115@miumg.edu.gt}
+		}
+		
+		{\itshape 
+			\href{https://github.com/sofiaMorales3805/ForoAcademico-Seminario}
+			{Repositorio en GitHub - Sofia Morales}
+		}
+	\end{center}
+	
+	\vspace{0.5cm}
+	\section*{Resumen}
+	
+	El presente artículo analiza los principios y las buenas prácticas necesarias para desarrollar aplicaciones reactivas capaces de responder oportunamente ante eventos, cambios de carga y fallos. A partir de la revisión de fuentes especializadas, se diferencia la programación reactiva, empleada para administrar flujos de datos asíncronos y no bloqueantes, de los sistemas reactivos, entendidos como un enfoque arquitectónico completo. Entre los principales resultados se identificaron cuatro propiedades: capacidad de respuesta, resiliencia, elasticidad y orientación a mensajes. También se reconocieron prácticas como documentar el flujo de eventos, aplicar contrapresión, reducir el estado compartido, aislar los fallos, incorporar métricas y ejecutar pruebas de carga y recuperación. Estas medidas favorecen el uso eficiente de los recursos y la continuidad del servicio; sin embargo, requieren una planificación cuidadosa, porque la asincronía puede dificultar la depuración y el monitoreo. Se concluye que una aplicación no se vuelve reactiva solamente por utilizar tareas asíncronas, sino por integrar principios de diseño, control del flujo, observabilidad y recuperación ante fallos.
+	
+	
+	\noindent
+	\textbf{Palabras clave:} programación reactiva, sistemas reactivos, resiliencia, elasticidad, mensajería asíncrona.
+	
+	
+	\section*{Desarrollo del tema}
+	
+	La programación reactiva y los sistemas reactivos responden a necesidades
+	relacionadas, pero no representan exactamente el mismo concepto. La
+	programación reactiva se aplica principalmente al procesamiento de flujos de
+	datos y eventos asíncronos, mientras que los sistemas reactivos incorporan
+	estos principios dentro de un enfoque arquitectónico más amplio (Bonér, 2023).
+	
+	Para implementar este enfoque adecuadamente, las buenas prácticas deben
+	considerarse desde la etapa de diseño. El flujo de eventos debe mostrar el
+	origen de los datos, los componentes encargados de procesarlos y las respuestas
+	generadas. Esto facilita la identificación de errores, retrasos y posibles
+	puntos de saturación. Gillis y Nolle (2024) también recomiendan mantener
+	actualizado el diagrama del flujo y revisar el acceso a las bases de datos para
+	evitar latencia innecesaria.
+	
+	Una práctica especialmente importante es la contrapresión. Este mecanismo
+	permite que el consumidor indique cuánto puede procesar y evita que un
+	productor envíe más información de la que el sistema puede atender. De esta
+	manera, se reduce el riesgo de utilizar recursos sin límite y de acumular
+	eventos pendientes durante periodos de alta demanda (Bonér, 2023).
+	
+	También es necesario aislar los componentes para impedir que el fallo de uno
+	afecte al sistema completo. El monitoreo mediante registros, métricas y
+	alertas permite detectar comportamientos anormales y conocer el estado de la
+	aplicación. Finalmente, las pruebas de carga, concurrencia y recuperación
+	ayudan a comprobar si el sistema conserva su capacidad de respuesta ante
+	fallos o variaciones en la cantidad de solicitudes.
+	
+	\begin{itemize}
+	
+	\item Diseñar y documentar el flujo de eventos.
+	\item Emplear operaciones asíncronas y no bloqueantes.
+	\item Aplicar contrapresión para evitar que un productor sature al consumidor.
+	\item Reducir el estado compartido entre componentes.
+	\item Aislar los fallos y establecer mecanismos de recuperación.
+	\item Implementar registros, métricas y monitoreo.
+	\item Realizar pruebas de carga, concurrencia y fallos.
+	\item Evaluar si el enfoque reactivo realmente es necesario para la aplicación.
+	
+	\end{itemize}
+	
+	TechTarget recomienda diagramar los flujos de eventos, reducir componentes con estado y revisar el acceso a las bases de datos para evitar latencia (Gillis \& Nolle, 2024). Akka también explica que la programación reactiva es una técnica interna, mientras que un sistema reactivo representa un enfoque arquitectónico más amplio (Bonér, 2023).
+	
+	\section*{Programación reactiva}
+	
+	La programación reactiva permite gestionar flujos de información y responder
+	a los cambios que se producen en los datos. Se apoya en operaciones asíncronas
+	y no bloqueantes para que la aplicación pueda continuar atendiendo otros
+	eventos mientras espera que finalice una operación, como una consulta a una
+	base de datos o una solicitud a un servicio externo.
+	
+	Según Pérez (2026), la programación reactiva permite que los componentes
+	respondan a modificaciones en los datos y procesen eventos mediante flujos
+	asíncronos sin detener la ejecución de la aplicación. Sus principales
+	principios son:
+	
+	\begin{itemize}
+		\item Flujos de datos observables.
+		\item Propagación de cambios.
+		\item Manejo eficiente de eventos.
+	\end{itemize}
+	
+	\section*{Sistemas reactivos}
+	
+	Los sistemas reactivos,son más flexibles, con bajo acoplamiento y escalables.	Son significativamente tolerantes a fallos y por ende cuando fallan responden de manera oportuna. Estos sistemas presentan cuatro características fundamentales según	(Bonér et al., 2014):
+	
+	\begin{itemize}
+		
+		\item \textbf{Responsivos:} mantienen tiempos de respuesta oportunos
+		y consistentes para proporcionar un servicio de calidad.
+		
+		\item \textbf{Resilientes:} conservan su capacidad de respuesta ante
+		fallos mediante el aislamiento, la contención y la recuperación de los
+		componentes afectados.
+		
+		\item \textbf{Elásticos:} aumentan o reducen los recursos utilizados
+		según los cambios en la carga de trabajo.
+		
+		\item \textbf{Orientados a mensajes:} utilizan mensajes asíncronos
+		para reducir el acoplamiento entre componentes y controlar el flujo
+		de información.
+		
+	\end{itemize}
+	
+	\section*{Observaciones y comentarios}
+	
+	El enfoque reactivo puede ser útil cuando una aplicación debe procesar
+	eventos constantes, responder en tiempo real o adaptarse a cambios de
+	carga. Sin embargo, su implementación también incrementa la complejidad
+	del desarrollo, especialmente durante la depuración y el seguimiento de
+	operaciones asíncronas. Por esta razón, no debería utilizarse únicamente
+	porque sea una tecnología moderna. Antes de adoptarlo, es necesario
+	analizar las necesidades, el volumen de eventos y los recursos disponibles.
+	
+	\section*{Conclusiones}
+	
+	\begin{enumerate}
+		
+		\item La programación reactiva facilita el procesamiento de eventos y
+		flujos de datos asíncronos sin bloquear innecesariamente la ejecución
+		de la aplicación.
+			
+		\item La contrapresión permite controlar la cantidad de información
+		procesada y evita que un productor sature la capacidad del consumidor.
+		
+		\item La resiliencia, la elasticidad y el aislamiento de fallos permiten
+		conservar la continuidad del servicio ante errores o cambios en la demanda.
+		
+		\item El enfoque reactivo puede utilizarse en aplicaciones de IoT, sistemas
+		distribuidos y servicios en tiempo real; sin embargo, su implementación
+		debe evaluarse según las necesidades y la complejidad del proyecto.
+		
+	\end{enumerate}
+	
+\section*{Bibliografía}
+
+\begin{itemize}[
+	leftmargin=1.27cm,
+	label={},
+	itemindent=-1.27cm,
+	itemsep=6pt
+	]
+	
+	\item Bonér, J. (2023, 24 de octubre).
+	\textit{Reactive programming vs. reactive systems}.
+	Akka.
+	\url{https://akka.io/blog/reactive-programming-versus-reactive-systems}
+	
+	\item Bonér, J., Farley, D., Kuhn, R., \& Thompson, M.
+	(2014, 16 de septiembre).
+	\textit{El Manifiesto de Sistemas Reactivos}.
+	\url{https://www.reactivemanifesto.org/es}
+	
+	\item Gillis, A. S., \& Nolle, T. (2024, 14 de junio).
+	\textit{What is reactive programming?}
+	TechTarget.
+	\url{https://www.techtarget.com/searchapparchitecture/definition/reactive-programming}
+	
+	\item Pérez, A. (2026, 11 de mayo).
+	\textit{Cómo aplicar la programación reactiva en aplicaciones web modernas}.
+	OBS Business School.
+	\url{https://www.obsbusiness.school/blog/como-aplicar-la-programacion-reactiva-en-aplicaciones-web-modernas-cp}
+	\end{itemize}
+	
+\end{document}
