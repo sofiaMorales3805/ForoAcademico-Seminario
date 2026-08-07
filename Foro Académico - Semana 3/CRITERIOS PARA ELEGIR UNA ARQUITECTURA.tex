@@ -258,6 +258,12 @@
 		\end{flushleft}
 	\end{table}
 	
+	El tipo de aplicación no determina por sí solo la arquitectura que debe
+	utilizarse. Por ejemplo, una aplicación web pequeña puede funcionar
+	correctamente con una arquitectura monolítica, mientras que una plataforma web
+	con miles de usuarios podría requerir microservicios, procesamiento de eventos
+	y recursos escalables. Por ello, la decisión debe basarse en los requisitos y
+	las características reales del proyecto.
 	
 	Microsoft (2025) recomienda evaluar si los beneficios de un estilo
 	arquitectónico superan sus dificultades dentro del contexto específico de la
@@ -278,15 +284,25 @@
 	
 	\begin{enumerate}
 		
-		\item La arquitectura debe ser seleccionada tomando en cuenta los requisitos, restricciones requeridas por los usuarios.
+		\item La arquitectura debe seleccionarse tomando en cuenta los requisitos
+		funcionales, los atributos de calidad y las restricciones del proyecto.
 		
-		\item  Una aplicación puede utilizar una arquitectura monolitica o de capas cuando la aplicación es pequeña.
+		\item Una aplicación pequeña puede utilizar una arquitectura monolítica o
+		en capas sin asumir innecesariamente la complejidad de un sistema
+		distribuido.
 		
-		\item No se debe asumir la complejidad de una aplicación, debe siempre realizarse un analisis y tomar en cuenta presupuesto y complejidad.
+		\item No se debe asumir la complejidad de una aplicación sin realizar
+		previamente un análisis de sus usuarios, funciones, presupuesto y
+		crecimiento esperado.
 		
-		\item	Elegir una arquitectura de microservicios puede funcionar para aplicaciones más complejas, donde se requiere de escalabilidad e independencia entre sus servicios.
+		\item Una arquitectura de microservicios puede ser apropiada para
+		aplicaciones complejas que requieren escalabilidad e independencia entre
+		sus servicios.
 		
-		\item	La experiecncia, el presupuesto y el mantenimiento también deben ser evaluados y alineados para poder seleccionar una arquitectura adecuada para una organización.
+		\item La experiencia del equipo, el presupuesto y las necesidades de
+		mantenimiento también deben evaluarse para seleccionar una arquitectura
+		adecuada para la organización.
+		
 		
 	\end{enumerate}
 	
