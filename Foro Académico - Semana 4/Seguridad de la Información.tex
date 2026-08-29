@@ -1,0 +1,150 @@
+% !TeX program = xelatex
+\documentclass[12pt]{article}
+\usepackage[spanish, es-nodecimaldot]{babel}
+
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+
+\usepackage[letterpaper,top=2.4cm,bottom=2.4cm,left=2.4cm,right=2.4cm]{geometry}
+
+\usepackage{setspace}
+\singlespacing
+\usepackage{xurl}
+\usepackage[hidelinks]{hyperref}
+
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{tabularx}
+\usepackage{array}
+
+\usepackage{titlesec}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+
+\titleformat{\section}
+{\normalfont\bfseries\fontsize{12}{14}\selectfont}
+{}{0pt}{}
+\titlespacing*{\section}{0pt}{6pt}{0pt}
+
+\author{Jenny Sofía Morales}
+
+\begin{document}
+	
+	\begin{center}
+		
+		{\bfseries\fontsize{12}{14}\selectfont
+			ENFOQUES DE LA SEGURIDAD DE LA INFORMACIÓN
+		}
+		
+		\vspace{0.4cm}
+		
+		{\itshape J. S. Morales López}
+		
+		\vspace{0.2cm}
+		
+		{\itshape 7690-08-6790 Universidad Mariano Gálvez}
+		
+		{\itshape Seminario de Tecnologías de Información}
+		
+		{\itshape
+			\href{mailto:jmorales115@miumg.edu.gt}{jmorales115@miumg.edu.gt}
+		}
+		
+		{\itshape
+			\href{https://github.com/sofiaMorales3805/ForoAcademico-Seminario}{Repositorio en GitHub - Sofia Morales}
+		}
+	\end{center}
+	\vspace{0.5cm}
+	
+	\section*{Resumen}
+	
+	El presente artículo analiza las diferencias y relaciones entre la seguridad de la información, la seguridad informática y la ciberseguridad. A partir de una revisión de fuentes técnicas y marcos reconocidos, se examina el alcance de cada concepto, los activos que protege y su aplicación dentro de las organizaciones. El análisis identifica que la seguridad de la información posee el alcance más amplio, pues comprende información física, digital y verbal; mientras que la seguridad informática se concentra principalmente en la infraestructura y los activos de tecnología de la información. La ciberseguridad aborda la prevención, detección y respuesta frente a amenazas digitales que afectan sistemas, redes y servicios interconectados. Asimismo, se comparan ISO/IEC 27001 y NIST CSF 2.0 como referencias complementarias para la gestión de riesgos. Se concluye que una protección efectiva requiere integrar políticas, personas, procesos y controles tecnológicos, evitando reducir la seguridad únicamente a herramientas técnicas aisladas. Esta integración contribuye a fortalecer la continuidad y la protección organizacional.
+	
+	\textbf{Palabras clave:} seguridad de la información, seguridad informática, ciberseguridad, ISO/IEC 27001, NIST CSF
+	
+	\section*{Desarrollo del tema}
+	
+	\textbf{Seguridad de la información}
+	
+	La seguridad de la información comprende la protección de la información y de los sistemas que participan en su tratamiento, sin importar si se encuentra en formato físico, digital o verbal. Su propósito es preservar la confidencialidad, integridad y disponibilidad frente a accesos, modificaciones, divulgaciones, interrupciones o destrucciones no autorizadas (National Institute of Standards and Technology, s. f.). Para alcanzar estos principios se requiere identificar los activos de información, analizar los riesgos y establecer controles administrativos, físicos y tecnológicos.
+	
+	\textbf{Seguridad informática}
+	
+	La seguridad informática se orienta a proteger los activos de tecnología de la información de una organización, como computadoras, servidores, bases de datos, redes, aplicaciones y dispositivos móviles. Para ello combina soluciones técnicas, procedimientos operativos y medidas físicas destinadas a prevenir accesos no autorizados, pérdida de información, fallos y ataques. Entre sus controles se encuentran la actualización del software, la administración de usuarios, el cifrado, las copias de seguridad, los antivirus, los cortafuegos y la protección física de los equipos (IBM, s. f.).
+	
+	\textbf{Ciberseguridad}
+	
+	La ciberseguridad comprende las prácticas destinadas a prevenir, detectar, responder y recuperarse de ataques contra sistemas, redes, servicios y datos digitales. Su campo de acción incluye Internet, redes privadas, servicios en la nube, dispositivos inteligentes y otros componentes del ciberespacio. Entre las amenazas que atiende se encuentran el malware, phishing, ransomware, robo de credenciales, ataques de denegación de servicio y explotación de vulnerabilidades (Graglia, 2024).
+	
+	\textbf{Relación entre los tres conceptos}
+	
+	Los tres conceptos tienen una delimitación puede variar según la institución o fuente consultada. Para efectos del presente artículo, la seguridad de la información se considera el ámbito más amplio, debido a que protege información física, digital y verbal. La seguridad informática se concentra en la infraestructura y los activos de tecnología de la información, mientras que la ciberseguridad atiende principalmente las amenazas que afectan sistemas, redes y servicios digitales. Por lo tanto, no son disciplinas aisladas, sino enfoques complementarios que deben coordinarse dentro de una estrategia organizacional (Paulsen, 2021; IBM, s. f.).
+	
+	\begin{itemize}
+		
+		\item \textbf{Seguridad de la información} es el concepto sombrilla o contenedor principal. Su objetivo es proteger los datos de la organización independientemente de su formato (digital, físico en papel o verbal).
+		\item \textbf{Seguridad informática} es un subconjunto enfocado exclusivamente en el plano tecnológico y los activos digitales (servidores, bases de datos y redes locales).
+		\item \textbf{Ciberseguridad} es la dimensión enfocada en los riesgos derivados de la interconexión a ciberespacios y redes externas.
+		
+	\end{itemize}
+	En síntesis, toda ciberseguridad es seguridad informática, y toda seguridad informática forma parte de la seguridad de la información.
+	
+	\textbf{Normativas, estándares y marcos de referencia}
+	
+	Las organizaciones pueden apoyarse en normas y marcos de referencia complementarios. ISO/IEC 27001:2022 establece los requisitos para implementar, mantener y mejorar un Sistema de Gestión de Seguridad de la Información, mientras que ISO/IEC 27002:2022 proporciona orientación para seleccionar controles relacionados con acceso, criptografía, personal y gestión de incidentes (International Organization for Standardization, 2022). Por su parte, NIST CSF 2.0 organiza los resultados de ciberseguridad en seis funciones: gobernar, identificar, proteger, detectar, responder y recuperar (Pascoe et al., 2024). Su aplicación conjunta permite relacionar la gestión organizacional con los controles operativos y tecnológicos.
+	
+	\section*{Observaciones y comentarios}
+	
+	Un error frecuente en las organizaciones consiste en reducir la seguridad a la instalación de antivirus, cortafuegos y otras herramientas técnicas. Estas medidas resultan insuficientes cuando no existen políticas, responsables, evaluación de riesgos y capacitación del personal. La protección debe abarcar personas, procesos y tecnología, debido a que una falla humana o administrativa puede anular controles técnicos correctamente implementados. Por esta razón, la seguridad debe gestionarse como un proceso continuo y no como una actividad aislada.
+	
+	\section*{Conclusiones}
+	
+	\begin{enumerate}
+		
+		\item La seguridad informática protege la infraestructura y los activos de tecnología de la información mediante controles técnicos, operativos y físicos, mientras que la ciberseguridad se concentra principalmente en la prevención y respuesta frente a amenazas digitales.
+		
+		\item ISO/IEC 27001, ISO/IEC 27002 y NIST CSF 2.0 cumplen funciones diferentes pero complementarias: la primera establece requisitos de gestión, la segunda orienta la implementación de controles y el tercero organiza los resultados de ciberseguridad.
+		
+		\item Se determinó que las organizaciones deben establecer procesos y guías de buenas prácticas para proteger la confidencialidad, integridad y disponibilidad de la información.
+		
+		\item La protección de la información requiere capacitaciones periódicas, ejercicios prácticos y pruebas de seguridad que permitan evaluar el cumplimiento de las políticas, detectar debilidades y reducir el riesgo de fuga de información.
+		
+	\end{enumerate}
+	
+	\section*{Referencias}
+	
+	\begin{itemize}[
+		leftmargin=1.27cm,
+		label={},
+		itemindent=-1.27cm,
+		itemsep=6pt
+		]
+		
+		\item International Organization for Standardization. (2022).
+		\textit{ISO/IEC 27001:2022: Information security management systems}.
+		\url{https://www.iso.org/standard/27001}
+		
+		\item International Organization for Standardization. (2022).
+		\textit{ISO/IEC 27002:2022: Information security controls}.
+		\url{https://www.iso.org/standard/75652.html}
+		
+		\item National Institute of Standards and Technology. (s. f.).
+		\textit{Information security}. Computer Security Resource Center Glossary.
+		Recuperado el 28 de agosto de 2026, de
+		\url{https://csrc.nist.gov/glossary/term/information_security}
+				
+		\item Graglia, I. (2024, 6 de septiembre).
+		\textit{Ciberseguridad: definición, tipos, amenazas y empleos}.
+		InvGate.
+		\url{https://blog.invgate.com/es/ciberseguridad}
+		
+		\item IBM. (s. f.).
+		\textit{¿Qué es la seguridad informática?}
+		Recuperado el 29 de agosto de 2026, de
+		\url{https://www.ibm.com/mx-es/think/topics/it-security}
+		
+	\end{itemize}
+	
+\end{document}
