@@ -1,0 +1,298 @@
+% !TeX program = xelatex
+\documentclass[12pt]{article}
+\usepackage[spanish,es-nodecimaldot]{babel}
+
+\usepackage{fontspec}
+\IfFontExistsTF{Times New Roman}{\setmainfont{Times New Roman}}{\setmainfont{Liberation Serif}}
+
+\usepackage[letterpaper,top=2.4cm,bottom=2.4cm,left=2.4cm,right=2.4cm]{geometry}
+\usepackage{setspace}
+% Renglon cerrado
+\singlespacing
+\usepackage{xurl}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{titlesec}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+
+\titleformat{\section}
+{\normalfont\bfseries\fontsize{12}{14}\selectfont}
+{}{0pt}{}
+\titlespacing*{\section}{0pt}{6pt}{0pt}
+
+\author{Jenny Sofía Morales}
+
+\begin{document}
+
+\begin{center}
+    {\bfseries\fontsize{12}{14}\selectfont
+        ASEGURAMIENTO DE LA CALIDAD EN UN PROYECTO DE TI
+    }
+
+    \vspace{0.4cm}
+
+    {\itshape J. S. Morales López}
+
+    \vspace{0.2cm}
+
+    {\itshape 7690-08-6790 Universidad Mariano Gálvez}
+
+    {\itshape Seminario de tecnologías de información}
+
+    {\itshape
+        \href{mailto:jmorales115@miumg.edu.gt}
+        {jmorales115@miumg.edu.gt}
+    }
+
+    {\itshape
+        \href{https://github.com/sofiaMorales3805/ForoAcademico-Seminario}
+        {Repositorio en GitHub - Sofia Morales}
+    }
+\end{center}
+
+\vspace{0.5cm}
+\section*{Resumen}
+
+Cuando se desarrolla un proyecto de Tecnologías de la Información (TI), no
+basta con entregar un sistema que funcione o cumplir con la fecha establecida.
+También es necesario comprobar que la solución responda a las necesidades del
+cliente y que sea segura, confiable y fácil de utilizar. Por esta razón,
+garantizar la calidad requiere definir los requisitos desde el inicio,
+planificar las revisiones, realizar pruebas durante el desarrollo y dar
+seguimiento a los resultados. En este artículo se explica la importancia de la
+planificación, el aseguramiento y el control de calidad, y cómo estas
+actividades ayudan a prevenir errores y comprobar que se cumpla lo acordado.
+Además, se con relacionada consideran referentes como ISO 9001:2026, con la
+gestión de la calidad, e ISO/IEC 25010:2023, que proporciona un modelo para
+evaluar la calidad de los productos tecnológicos. También se toman en cuenta
+las prácticas de pruebas del ISTQB y las recomendaciones del NIST para reducir
+riesgos de seguridad. Como resultado del análisis, se identifica que la
+calidad no se obtiene con una sola revisión al finalizar el proyecto, sino
+mediante un trabajo constante en el que participan el equipo y los interesados.
+
+\noindent\textbf{Palabras clave:} calidad, proyectos de TI, requisitos,
+aseguramiento de la calidad, pruebas de software, mejora continua.
+
+\section*{Desarrollo del tema}
+
+Al hablar de calidad en un proyecto de TI, muchas veces pensamos en un sistema
+que funciona correctamente y que no presenta bugs. Sin embargo, esto no es
+suficiente. Un proyecto también debe cumplir con lo que se acordó con el
+cliente, responder a las necesidades de los usuarios y mantenerse dentro de
+las condiciones de tiempo y presupuesto establecidas. Para lograrlo, se
+necesita organización, comunicación y seguimiento durante todas las etapas del
+proyecto.\textsuperscript{[1,2]}
+
+\noindent\textbf{Definición de requisitos y criterios de calidad}
+
+El primer paso es tener claro qué necesita el cliente y cómo se comprobará que
+la solución cumple con esas necesidades. Los requisitos funcionales indican
+qué debe hacer el sistema, mientras que los no funcionales establecen
+condiciones relacionadas con el rendimiento, la seguridad, la disponibilidad
+y la facilidad de uso.
+
+No basta con decir que una aplicación debe ser rápida o segura. Es mejor
+definir criterios que se puedan medir y comprobar. Por ejemplo, se puede
+establecer un tiempo máximo de respuesta para una operación y realizar pruebas
+bajo condiciones definidas. La norma ISO/IEC 25010:2023 presenta un modelo de
+calidad que ayuda a identificar y evaluar estas características en los
+productos.\textsuperscript{[5]}
+
+\noindent\textbf{Planificación de la calidad}
+
+El primer paso es realizar una toma de requerimientos optima, ya que con estos los requisitos son definidos correctamente, es importante organizar las actividades
+que permitirán comprobar su cumplimiento. Para ello, se puede preparar un
+plan de calidad que indique qué se revisará, quién será responsable, qué
+pruebas se realizarán y qué resultados deberán quedar registrados. Esto ayuda
+a evitar que los problemas se descubran cuando el proyecto ya está por
+terminar.
+
+El Project Management Institute (PMI) aborda la planificación, el
+aseguramiento y el control de calidad como actividades relacionadas dentro de
+la gestión de proyectos. Por su parte, ISO 9001:2026 proporciona requisitos
+para organizar y mejorar los procesos de gestión de la calidad. Ambos
+referentes permiten entender por qué la calidad debe planificarse y no dejarse
+para el final.\textsuperscript{[3,4]}
+
+\noindent\textbf{Aseguramiento y control de calidad}
+
+Aunque estos conceptos están relacionados, no significan exactamente lo
+mismo. El aseguramiento de la calidad busca prevenir problemas mediante la
+revisión de los procesos y la aplicación de buenas prácticas. En cambio, el
+control de calidad se enfoca en revisar el resultado del trabajo para
+detectar defectos o comprobar que se cumplen los requisitos.
+
+Por ejemplo, verificar que el equipo siga un procedimiento de desarrollo
+forma parte del aseguramiento. Ejecutar una prueba para confirmar que un
+módulo realiza correctamente una operación corresponde al control. En un
+proyecto de TI son necesarias ambas actividades, porque trabajar de forma
+ordenada no significa que nunca habrá errores.\textsuperscript{[3]}
+
+\noindent\textbf{Pruebas y revisión durante el desarrollo}
+
+Las pruebas no deberían realizarse únicamente cuando el sistema está
+terminado. Si se detecta un problema desde las primeras etapas, generalmente
+resulta más sencillo revisarlo y corregirlo antes de que afecte otras partes
+del proyecto. Por eso es importante probar los componentes conforme se van
+desarrollando y volver a revisar los que reciben modificaciones.
+
+En el proceso de las pruebas y desarrollo una de las mejores prácticas, es que el desarrollador, pueda ir probando localmente sus propias funcionalidades, para después probar la integración con los otros módulos, y así ira incrementando las fases, como revisar la prueba de integración , las pruebas de sistema , y así ir implementando las diferentes técnicas de pruebas , para ir realizando la comprobación integral del sistema.
+
+De acuerdo con los contenidos del ISTQB, las pruebas pueden incluir revisiones
+de documentos y código, pruebas unitarias, de integración, de sistema y de
+aceptación. Cada una tiene un propósito diferente. Las pruebas unitarias
+revisan partes específicas del sistema; las de integración comprueban su
+comunicación, y las de aceptación permiten evaluar si la solución responde a
+lo que necesita el usuario. Algunas pruebas pueden automatizarse, pero otras
+requieren observación y análisis por parte del equipo.\textsuperscript{[6]}
+
+\noindent\textbf{Indicadores para evaluar la calidad}
+
+Para saber si el proyecto está cumpliendo con los objetivos, es necesario
+medir los resultados. Entre los indicadores que se pueden utilizar están el
+porcentaje de pruebas aprobadas, la cantidad de errores pendientes, el tiempo
+que se tarda en resolver un problema y el cumplimiento de los criterios de
+aceptación. También se pueden revisar los tiempos de respuesta y la
+disponibilidad del sistema cuando estas características sean importantes.
+
+Sin embargo, los indicadores deben interpretarse según el contexto. Por
+ejemplo, tener muchas pruebas aprobadas no significa que todo está bien si
+todavía existe un error grave que impide realizar una operación importante.
+Por eso, no se trata solo de registrar números, sino de utilizarlos para
+tomar decisiones y mejorar el proyecto.\textsuperscript{[2,5]}
+
+\noindent\textbf{Gestión de riesgos y seguridad}
+
+Otro aspecto que no se debe dejar de lado es la seguridad. Un sistema puede
+funcionar correctamente y aun así tener problemas que pongan en riesgo la
+información de los usuarios. Desde el inicio es importante identificar qué
+puede fallar, qué impacto tendría y qué medidas se pueden aplicar para reducir
+ese riesgo. Esto también incluye revisar dependencias tecnológicas, cambios
+de alcance y posibles problemas de integración.
+
+El NIST, mediante su marco de desarrollo seguro de software (SSDF), recomienda
+integrar prácticas de seguridad durante el desarrollo, en lugar de esperar
+hasta que la aplicación esté terminada. Su propósito es ayudar a reducir
+vulnerabilidades y atender las causas de los problemas encontrados. Estas
+acciones mejoran la confianza en el producto, aunque no es posible asegurar
+que un sistema nunca tendrá fallas.\textsuperscript{[1,7]}
+
+\noindent\textbf{Comunicación y mejora continua}
+
+La calidad también depende de que exista una buena comunicación entre el
+cliente, los desarrolladores y las personas encargadas de las pruebas. Si un
+requisito se entiende de manera diferente, el equipo puede desarrollar algo
+que funciona técnicamente, pero que no resuelve la necesidad del usuario.
+Revisar los avances y aclarar las dudas a tiempo ayuda a evitar ese tipo de
+problemas.
+
+En Scrum, por ejemplo, la Definición de Terminado establece las condiciones
+de calidad que debe cumplir un incremento para considerarse completo. Las
+retrospectivas también permiten analizar lo que salió bien, qué dificultades
+se presentaron y qué se puede mejorar. Aunque no todos los proyectos trabajan
+con Scrum, estas ideas pueden servir para mantener una revisión constante y
+aprender de los resultados.\textsuperscript{[8]}
+
+\section*{Observaciones y comentarios}
+
+Considero que uno de los problemas más comunes es pensar que un proyecto tiene
+calidad únicamente porque el sistema funciona. En la práctica, también se debe comprobar si la solución es fácil de usar, si protege la información y si puede responder correctamente cuando existen más usuarios o cambian algunas condiciones. Por eso, una sola prueba no es suficiente para determinar la calidad de un producto.
+
+También es importante que el cliente participe en las revisiones. Si
+sus necesidades no se entienden desde el inicio, se puede terminar entregando
+un sistema que cumple con las especificaciones técnicas, pero que no resuelve
+por completo el problema para el cual fue creado. Esto demuestra que la
+calidad no depende únicamente de los desarrolladores o de quienes realizan
+las pruebas.
+
+Desde mi punto de vista, aplicar normas y herramientas es útil, pero lo más
+importante es que el equipo realmente utilice los resultados para corregir
+errores y mejorar la manera de trabajar. No se trata de llenar documentos o
+cumplir actividades solo por obligación, sino de llevar un control que permita
+entregar una solución confiable y adecuada para el usuario.
+
+Considero también importante la toma de requerimientos, utilizar las herramientas necesarias para obtener información adecuada para modelar las soluciones, por eso los marcos como las ISO, nos ayudan a formar un criterio para poder modelar de manera correcta soluciones optimas para cada requerimiento.
+
+\section*{Conclusiones}
+
+\begin{enumerate}
+    \item Para garantizar la calidad de un proyecto de TI es necesario definir
+    desde el inicio lo que necesita el cliente y cómo se comprobará su
+    cumplimiento.
+
+    \item La planificación, el aseguramiento y el control de calidad deben
+    aplicarse durante el desarrollo. Esto permite prevenir problemas y
+    revisar los resultados antes de la entrega final.
+
+    \item Las pruebas y los indicadores ayudan a identificar errores y tomar
+    decisiones. Además, sus resultados deben analizarse según las
+    necesidades y los riesgos de cada proyecto.
+
+    \item La seguridad y la comunicación con los interesados también forman
+    parte de la calidad, porque no basta con que un sistema funcione si no
+    protege la información o no resuelve el problema esperado.
+	
+	\item La comunicación efectiva en el proceso tambien asegura la calidad de los requeriemientos entregados, ya que con esto aseguramos que el cliente este de acuerdo con las funcionalidades entregadas y de nuestro lado asegurar que la  entrega satisfase lo solicitado.
+	
+    \item Mantener la calidad requiere seguimiento y mejora continua. Aunque
+    no es posible garantizar que un sistema esté libre de errores, sí se
+    pueden establecer prácticas para reducirlos y responder a tiempo.
+\end{enumerate}
+
+\section*{Referencias}
+
+% Permite distribuir mejor los títulos largos y las direcciones URL.
+\emergencystretch=1.5em
+\begin{enumerate}[
+    leftmargin=1.27cm,
+    label={[\arabic*]},
+    itemsep=6pt
+]
+    \item Carmona, R. (s. f.).
+    \textit{5 elementos clave en la gestión de proyectos de TI}.
+    MAGNET Telecommunications.
+    \url{https://www.magnetmex.com/gestion-de-proyectos-de-ti/}
+
+    \item Joseph, L. (s. f.).
+    \textit{Gestión de proyectos de TI: guía completa para equipos y responsables}.
+    Lemon Learning.
+    \url{https://lemonlearning.com/es/blog/gestion-proyectos-ti-guia-completa}
+
+    \item Rever, H. (2007, 14 de noviembre).
+    \textit{Quality in project management---a practical look at chapter 8 of the PMBOK Guide}.
+    Project Management Institute.
+    \url{https://www.pmi.org/learning/library/quality-project-management-tools-7177}
+
+    \item International Organization for Standardization. (2026).
+    \textit{ISO 9001:2026: Quality management systems---Requirements}.
+    \url{https://committee.iso.org/standard/9001}
+
+    \item International Organization for Standardization y
+    International Electrotechnical Commission. (2023).
+    \textit{ISO/IEC 25010:2023: Systems and software engineering---Systems
+    and software Quality Requirements and Evaluation (SQuaRE)---Product quality model}.
+    \url{https://www.iso.org/standard/78176.html}
+
+    \item International Software Testing Qualifications Board. (s. f.).
+    \textit{Certified Tester Foundation Level (CTFL) v4.0}.
+    \url{https://istqb.org/certifications/certified-tester-foundation-level-ctfl-v4-0/}
+
+    \item Souppaya, M., Scarfone, K., \& Dodson, D. (2022).
+    \textit{Secure Software Development Framework (SSDF) Version 1.1:
+    Recommendations for Mitigating the Risk of Software Vulnerabilities}
+    (NIST SP 800-218).
+    National Institute of Standards and Technology.
+    \url{https://doi.org/10.6028/NIST.SP.800-218}
+
+    \item Schwaber, K., \& Sutherland, J. (2020).
+    \textit{The Scrum Guide: The definitive guide to Scrum---The rules of the game}.
+    \url{https://scrumguides.org/scrum-guide.html}
+\end{enumerate}
+
+\end{document}
